@@ -1,0 +1,182 @@
+.app-android .app-topbar .app-title{
+            float:none!important;
+            text-align: center!important;
+        }
+        #homePageSignIn{
+            margin-top:80%;
+        }
+        @font-face {
+            font-family: klavika;
+            src: url(klavikaRegularPlain.otf);
+        }
+        @font-face {
+            font-family: codeBold;
+            src: url(codeBold.otf);
+        }
+        #signInFacebook{
+            background-color:#45619D;
+            margin:-10px;
+            color:white;
+            font-family: klavika;
+        }
+        #signUp{
+            background-color:white;
+            margin:0px;
+            color:#45619D;
+            font-family: klavika;
+            width:49%;
+            float:left;
+        }
+        #signIn{
+            background-color:white;
+            margin:0px;
+            color:#45619D;
+            font-family: klavika;
+            width:49%;
+            float:right;
+        }
+        #signUpInSection{
+            background-color:black;
+        }
+        #homePageTitle{
+            padding-top:10px;
+            font-family: codeBold;
+            font-size:3em;
+        }
+        #homePageSlogan{
+            font-family: Verdana, sans-serif;
+            font-size:0.8em;
+            text-align:center;
+            color:white;
+        }
+        #homePageTAG{
+            font-family: Verdana, sans-serif;
+            font-size:0.6em;
+            text-align:center;
+            color:white;
+            bottom:0;
+            text-decoration: underline;
+        }
+        .whiteTitle{
+            background-color: white;
+        }
+        .lightGrayTitle{
+            background-color: lightgray;
+        }
+        
+        .blackText{
+            color:black;
+        }
+        .text-center{
+            left:25%;
+        }
+        .app-android .app-topbar .app-button.left ~ .app-title{
+            padding-left: 0px!important;
+        }
+        .app-section-extended{
+            margin:0px!important;
+            border:1px solid lightGray;
+            border-radius: 0px;
+        }
+        #upBtn, #downBtn{
+            color:darkgray
+        }
+        #upBtn{
+            width:25%;
+            float:right;
+            margin:0px;
+        }
+        #downBtn{
+            width:33%;
+            float:left;
+        }
+        #sliderSection{
+            height:55px;
+        }
+        #popularBtn, #freeBtn, #instantBtn{
+            position:relative;
+            width:33%;
+            float:left;
+            margin:0;
+            margin-top:-6px;
+            font-size:.9em;
+            color:darkgray;
+        }
+        #tabsSection{
+            height:45px;
+        }
+        .smallText{
+            font-size:0.7em;
+        }
+        li{
+            font-size:0.9em;
+            color:black;
+/*            list-style-type: none;*/
+        }
+        .tags, .sharePost, .favoritePost{
+            float:left;
+            font-size:0.6em;
+            border-right:1px solid lightgray;
+            border-left:1px solid lightgray;
+            border-radius:0px!important;
+            padding:6px;
+        }
+        .tags{
+            width:50%;
+        }
+        .sharePost, .favoritePost{
+            width:25%;
+        }
+        .eventSection{
+            height:315px;
+        }
+        .activeBtn{
+            background-color: black!important;
+            color:white!important;
+            border:1px solid white!important;
+        }
+        .app-footer{
+            bottom:0;
+            position:fixed;
+            margin:0;
+            width:100%;
+            background-color:white;
+            border-radius:0px;
+            border-top:2px solid darkgray;
+        
+        }
+        #hangoutsFooter, #meFooter, #hostFooter, #promoterFooter, #settingsFooter {
+            width: 18%;
+            float: left;
+            margin: 3px;
+            font-size: 0.75em;
+            background-color: #FFF;
+            color: #373a3c;
+            border-radius: 10px;
+            font-family: klavika;
+        }
+        .footer{
+            
+        }
+        input[type=radio], input[type=checkbox]{
+            margin-top:15px;
+        }
+        #cancelEventsText{
+            font-size:0.75em;
+        }
+        #LocationSearchInput{
+            line-height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding: 3px;
+            font-size: 0.8em;
+            width: 75%;
+        }
+#paypalInput{
+        border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 0.9em;
+    line-height: 25px;
+    width: 100%;
+    padding-left: 10px;
+}

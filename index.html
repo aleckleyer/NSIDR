@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+<link rel="stylesheet" href="jquery/jquery-ui.min.css">
+ 
+      <link rel="stylesheet" href="app.min.css">
+    <style type="text/css">
+        .app-android .app-topbar .app-title{
+            float:none!important;
+            text-align: center!important;
+        }
+        #homePageSignIn{
+            margin-top:80%;
+        }
+        @font-face {
+            font-family: klavika;
+            src: url(klavikaRegularPlain.otf);
+        }
+        @font-face {
+            font-family: codeBold;
+            src: url(codeBold.otf);
+        }
+        #signInFacebook{
+            background-color:#45619D;
+            margin:-10px;
+            color:white;
+            font-family: klavika;
+        }
+        #signUp{
+            background-color:white;
+            margin:0px;
+            color:#45619D;
+            font-family: klavika;
+            width:49%;
+            float:left;
+        }
+        #signIn{
+            background-color:white;
+            margin:0px;
+            color:#45619D;
+            font-family: klavika;
+            width:49%;
+            float:right;
+        }
+        #signUpInSection{
+            background-color:black;
+        }
+        #homePageTitle{
+            padding-top:10px;
+            font-family: codeBold;
+            font-size:3em;
+        }
+        #homePageSlogan{
+            font-family: Verdana, sans-serif;
+            font-size:0.8em;
+            text-align:center;
+            color:white;
+        }
+        #homePageTAG{
+            font-family: Verdana, sans-serif;
+            font-size:0.6em;
+            text-align:center;
+            color:white;
+            bottom:0;
+            text-decoration: underline;
+        }
+        .whiteTitle{
+            background-color: white;
+        }
+        .lightGrayTitle{
+            background-color: lightgray;
+        }
+        
+        .blackText{
+            color:black;
+        }
+        .text-center{
+            left:25%;
+        }
+        .app-android .app-topbar .app-button.left ~ .app-title{
+            padding-left: 0px!important;
+        }
+        .app-section-extended{
+            margin:0px!important;
+            border:1px solid lightGray;
+            border-radius: 0px;
+        }
+        #upBtn, #downBtn{
+            color:darkgray
+        }
+        #upBtn{
+            width:25%;
+            float:right;
+            margin:0px;
+        }
+        #downBtn{
+            width:33%;
+            float:left;
+        }
+        #sliderSection{
+            height:55px;
+        }
+        #popularBtn, #freeBtn, #instantBtn{
+            position:relative;
+            width:33%;
+            float:left;
+            margin:0;
+            margin-top:-6px;
+            font-size:.9em;
+            color:darkgray;
+        }
+        #tabsSection{
+            height:45px;
+        }
+        .smallText{
+            font-size:0.7em;
+        }
+        li{
+            font-size:0.9em;
+            color:black;
+/*            list-style-type: none;*/
+        }
+        .tags, .sharePost, .favoritePost{
+            float:left;
+            font-size:0.6em;
+            border-right:1px solid lightgray;
+            border-left:1px solid lightgray;
+            border-radius:0px!important;
+            padding:6px;
+        }
+        .tags{
+            width:50%;
+        }
+        .sharePost, .favoritePost{
+            width:25%;
+        }
+        .eventSection{
+            height:285px;
+        }
+        .activeBtn{
+            background-color: black!important;
+            color:white!important;
+            border:1px solid white!important;
+        }
+        .app-footer{
+            bottom:0;
+            position:fixed;
+            margin:0;
+            width:100%;
+            background-color:white;
+            border-radius:0px;
+            border-top:2px solid darkgray;
+        
+        }
+        #hangoutsFooter, #meFooter, #hostFooter, #promoterFooter, #settingsFooter {
+            width: 18%;
+            float: left;
+            margin: 3px;
+            font-size: 0.75em;
+            background-color: #FFF;
+            color: #373a3c;
+            border-radius: 10px;
+            font-family: klavika;
+        }
+        .footer{
+            
+        }
+        input[type=radio], input[type=checkbox]{
+            margin-top:15px;
+        }
+        #cancelEventsText{
+            font-size:0.75em;
+        }
+    </style>
+  </head>
+
+  <body>
+      <script>
+//  window.fbAsyncInit = function() {
+//    FB.init({
+//      appId      : '1087458257973221',
+//      xfbml      : true,
+//      version    : 'v2.5'
+//    });
+//  };
+//
+//  (function(d, s, id){
+//     var js, fjs = d.getElementsByTagName(s)[0];
+//     if (d.getElementById(id)) {return;}
+//     js = d.createElement(s); js.id = id;
+//     js.src = "//connect.facebook.net/en_US/sdk.js";
+//     fjs.parentNode.insertBefore(js, fjs);
+//   }(document, 'script', 'facebook-jssdk'));
+</script>
+      
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title" id="homePageTitle">N S I D R</div>
+      </div>
+      <div class="app-content" style="background-color:black;">
+            <p id="homePageSlogan">You're never alone with N S I D R</p>
+          <div class="app-section" id="homePageSignIn">
+            
+          <div class="app-button" id="signInFacebook">Sign in w/ Facebook</div>
+          </div>
+          <div class="app-section" id="signUpInSection">
+              <div class="app-button" id="signUp" data-target="SignUp">Sign up</div>
+              <div class="app-button" id="signIn" data-target="SignIn">Sign In</div>
+        </div>
+          <div class="app-section" style="background-color:black;margin-top:45px;padding-top:-15px;">
+          <div class="app-button" data-target="termsAgreement" style="background-color:black;">
+          <p id="homePageTAG">Terms and Agreements</p>
+          </div>
+              </div>
+      </div>
+    </div>
+      
+      <div class="app-page" data-page="termsAgreement">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Terms and Agreement</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          
+<p>Last updated: April 04, 2016</p>
+<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the NSIDR.com website (the "Service") operated by NSIDR ("us", "we", or "our").</p>
+<p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+<p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+<p><strong>Accounts</strong></p>
+<p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
+<p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service.</p>
+<p>You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+<p><strong>Links To Other Web Sites</strong></p>
+<p>Our Service may contain links to third-party web sites or services that are not owned or controlled by NSIDR.</p>
+<p>NSIDR has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that NSIDR shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+<p>We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.</p>
+<p><strong>Termination</strong></p>
+<p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+<p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+<p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+<p>Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service.</p>
+<p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+<p><strong>Governing Law</strong></p>
+<p>These Terms shall be governed and construed in accordance with the laws of New York, United States, without regard to its conflict of law provisions.</p>
+<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+<p><strong>Changes</strong></p>
+<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+<p><strong>Contact Us</strong></p>
+<p>If you have any questions about these Terms, please contact us.</p>
+
+            
+          </div>
+
+
+      </div>
+    </div>
+
+    
+        
+        <div class="app-page" data-page="SignUp">
+   <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Sign Up</div>
+      </div>
+    <br />
+    <div class="app-content">
+        <input id="btnUserName" class="app-input" placeholder="Username">
+        <input id="btnEmail" class="app-input" placeholder="Email">
+        <input id="btnPassword" class="app-input" placeholder="Password" type="password">
+        <input id="btnCPassword" class="app-input" placeholder="Confirm Password" type="password">
+        <div id="btnSignUp" class="app-button green">SignUp</div>
+    </div>
+</div>
+      
+      <div class="app-page" data-page="SignIn">
+    <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Sign In</div>
+      </div>
+    <br />
+    <div class="app-content">
+        <input id="btnEmailSignIn" class="app-input" placeholder="Email">
+        <input id="btnPass" class="app-input" placeholder="Password" type="password">
+        <div id="btnSignIn" class="app-button green">SignIn</div>
+    </div>
+</div>
+      
+      <div class="app-page" data-page="mainPage">
+      <div class="app-topbar">
+        <div class="app-title whiteTitle blackText"><div class="app-button text-center" data-target="locations">(Your Location) &dtrif;</div> </div>
+      </div>
+     <div class="app-content">
+            <div class="app-section app-section-extended" id="sliderSection">
+                <div class="app-button" id="downBtn">Down</div>
+                <div style="float:left;">Distance: <span id="sliderValue">0</span> mi</div>
+                <div class="app-button" id="upBtn">Up</div>
+            </div>
+            <div class="app-section app-section-extended" id="tabsSection">
+                <div class="app-button activeBtn" id="popularBtn">Popular</div>
+                <div class="app-button" id="freeBtn">Free</div>
+                <div class="app-button" id="instantBtn">Instant</div>
+            </div>
+            <div class="app-section app-section-extended">
+                <p class="smallText">Today, Dec 11 @ Time</p>
+            </div>
+            <div class="app-section app-section-extended eventSection">
+                <img src="http://www.placehold.it/340x150"/>
+                <ul>
+                    <li style="font-weight:bold;">Event Title</li>
+                    <li>Neighbourhood</li>
+                    <li>KM from you</li>
+                </ul>
+                <hr>
+                <div class="tags">#houseParty #80snight</div>
+                <div class="sharePost">&loang;</div>
+                <div class="favoritePost">&loang;</div>
+            </div>
+         <div class="app-section app-section-extended eventSection">
+                <img src="http://www.placehold.it/340x150"/>
+                <ul>
+                    <li style="font-weight:bold;">Event Title</li>
+                    <li>Neighbourhood</li>
+                    <li>KM from you</li>
+                </ul>
+                <hr>
+                <div class="tags">#houseParty #80snight</div>
+                <div class="sharePost">&loang;</div>
+                <div class="favoritePost">&loang;</div>
+            </div>
+         <div class="app-section app-section-extended eventSection">
+                <img src="http://www.placehold.it/340x150"/>
+                <ul>
+                    <li style="font-weight:bold;">Event Title</li>
+                    <li>Neighbourhood</li>
+                    <li>KM from you</li>
+                </ul>
+                <hr>
+                <div class="tags">#houseParty #80snight</div>
+                <div class="sharePost">&loang;</div>
+                <div class="favoritePost">&loang;</div>
+            </div>
+         <div class="app-section" style="background:none;height:32px;"></div>
+         <div class="app-section app-footer">
+            <div class="app-button" id="hangoutsFooter" data-target="Hangouts">Hangouts</div>
+            <div class="app-button" id="meFooter" data-target="MePage">Me</div>
+            <div class="app-button" id="hostFooter" data-target="HostPage">Host</div>
+            <div class="app-button" id="promoterFooter" data-target="PromoterPage">Promoter</div>
+            <div class="app-button" id="settingsFooter" data-target="settingsPage">Settings</div>
+         </div>
+      </div>
+    </div>
+      
+    <div class="app-page" data-page="locations">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Locations</div>
+      </div>
+      
+    </div>
+      
+      <div class="app-page" data-page="Hangouts">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Hangouts</div>
+      </div>
+      
+    </div>
+      <div class="app-page" data-page="MePage">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Me</div>
+      </div>
+      
+    </div>
+      <div class="app-page" data-page="HostPage">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Host</div>
+      </div>
+      
+    </div>
+      <div class="app-page" data-page="PromoterPage">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Promoter</div>
+      </div>
+      
+    </div>
+      
+    <div class="app-page" data-page="settingsPage">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Settings</div>
+      </div>
+        <div class="app-content">
+            <div class="app-section">
+                <h5 style="text-align:center">Linked Accounts</h5>
+                <hr>
+                <div class="app-button" data-target="">Facebook</div>
+                <div class="app-button" data-target="">Twitter</div>
+                <div class="app-button" data-target="">PayPal</div>
+                <div class="app-button" data-target="">Venmo</div>
+            </div>
+            <div class="app-section">
+                <h5 style="text-align:center">Payment Info</h5>
+                <hr>
+                <div class="app-button" data-target="">Credit Cards</div>
+                <div class="app-button" data-target="">Paypal E-mail</div>
+
+            </div>
+            <div class="app-section">
+                <h5 style="text-align:center">Account</h5>
+                <hr>
+                <div class="app-button" data-target="settingsPrivacy">Privacy</div>
+                <div class="app-button" data-target="settingsCancel">Cancel Events</div>
+                <div class="app-button" data-target="settingsSharing">Sharing</div>
+                <div class="app-button" data-target="settingsNotifications">Notifications</div>
+                <div class="app-button" data-target="settingsHelp">Help</div>
+                <div class="app-button" data-target="home">Log out</div>
+                <div class="app-button" data-target="termsAgreement">Terms</div>
+            </div>
+        </div>
+    </div>
+    <div class="app-page" data-page="settingsPrivacy">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Settings</div>
+      </div>
+        <div class="app-content">
+            <div class="app-section">
+                <h5 style="text-align:center">Privacy</h5>
+                <hr>
+                <form>
+                <ul class="app-list">
+                <li style="font-size:0.75em;">Everyone can see the events I'm attending<input type="radio" name="privacy" value="" style="float:right;"></li>
+                <li style="font-size:0.75em;">Only FB Friends can see the events I'm attending<input type="radio" name="privacy" value="" style="float:right;"></li>
+                <li style="font-size:0.75em;">No one can see the events I'm attending<input type="radio" name="privacy" value="" style="float:right;"></li>
+                </ul>
+                    </form>
+            </div>
+        </div>
+    </div>
+      <div class="app-page" data-page="settingsSharing">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Settings</div>
+      </div>
+        <div class="app-content">
+            <div class="app-section">
+                <h5 style="text-align:center">Facebook</h5>
+                <hr>
+                <ul class="app-list">
+                <li>Share events that you're hosting<input type="checkbox" name="sharingFB" value="yesHosting" style="float:right;"></li>
+                <li>Share events that you're attending<input type="checkbox" name="sharingFB" value="yesAttending" style="float:right;"></li>
+                </ul>
+            </div>
+            <div class="app-section">
+                <h5 style="text-align:center">Twitter</h5>
+                <hr>
+                <ul class="app-list">
+                <li>Share events that you're hosting<input type="checkbox" name="sharingTwitter" value="yesHosting" style="float:right;"></li>
+                <li>Share events that you're attending<input type="checkbox" name="sharingTwitter" value="yesAttending" style="float:right;"></li>
+                </ul>
+            </div>
+        </div>
+            
+        </div>
+       <div class="app-page" data-page="settingsNotifications">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Settings</div>
+      </div>
+        <div class="app-content">
+            <div class="app-section">
+                <h5 style="text-align:center">Notifications</h5>
+                <hr>
+                <form>
+                <ul class="app-list">
+                <li>New Popular Event<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Event Reminder<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Rate Event Reminder<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Event Address Notification<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Acceptance/Rejection to Event<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Event Changes<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Permission Requests For Your Events<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>Received Event Invitations<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                <li>New People Going to My Event<input type="checkbox" name="notification" value="" style="float:right;"></li>
+                
+                </ul>
+                    </form>
+            </div>
+        </div>
+            
+        </div>
+       <div class="app-page" data-page="settingsCancel">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Settings</div>
+      </div>
+        <div class="app-content">
+            <div class="app-section">
+                <h5 style="text-align:center">Cancel Events</h5>
+                <hr>
+                <p id="cancelEventsText">Cancelling an event before a "week's notice" will not allow you to re-create an event right away.
+                You'll have to wait one week to create a new event. If you need to change something, we recomment you to "edit" 
+                the event through your hosting page.</p>
+            </div>
+            <div class="app-section">
+                <h6 style="text-align:center">Current Events</h6>
+                <hr>
+                <ul class="app-list">
+                <li>Event Title/Date @ Time <span style="float:right;">Edit/Cancel</span></li>
+                <li>Event Title/Date @ Time <span style="float:right;">Edit/Cancel</span></li>
+                <li>Event Title/Date @ Time <span style="float:right;">Edit/Cancel</span></li>
+                </ul>
+            </div>
+        </div>
+            
+        </div>
+      <div class="app-page" data-page="settingsHelp">
+      <div class="app-topbar">
+          <div class="app-button left" data-back>Back</div>
+        <div class="app-title lightGrayTitle blackText">Settings</div>
+      </div>
+        <div class="app-content">
+            <div class="app-section">
+                <h5 style="text-align:center">Help</h5>
+                <hr>
+                <p id="">Under Construction...</p>
+            </div>
+        </div>
+            
+        </div>
+      <script type='text/javascript' src='firebase.js'></script>
+      <script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.6.1/firebase-simple-login.js'></script>
+        
+      <script src="zepto.js"></script>
+        
+      <script src="app.min.js"></script>
+      
+      <script type="text/javascript">
+
+        var ref = new Firebase("https://brilliant-fire-8234.firebaseio.com/");
+        var auth = new FirebaseSimpleLogin(ref, function (error, user) {
+                                                    if (!error) {
+                                                        if (user) {
+                                                            App.load('mainPage',user);
+                                                        }
+                                                    }
+                                                }
+                                          );
+          
+      App.controller('home', function (page) {
+          $(page)
+            .find('#signInFacebook')
+            .on('click', function () {
+                var ref = new Firebase("https://brilliant-fire-8234.firebaseio.com");
+                ref.authWithOAuthPopup("facebook", function(error, authData) {
+                  if (error) {
+                    console.log("Login Failed!", error);
+                  } else {
+                    console.log("Authenticated successfully with payload:", authData);
+                  }
+                });
+          })
+      });
+          
+          App.controller('SignUp', function (page) {
+        $(page)
+        .find('#btnSignUp')
+        .on('click', function () {
+            var username = $('#btnUserName').val();
+            var email = $('#btnEmail').val();
+            var password = $('#btnPassword').val();
+            var cpassword = $('#btnCPassword').val();
+            if (password !== cpassword){
+                App.dialog({
+                    title: 'Passwords do not match!',
+                    text: 'Please re-enter your password.',
+                    okButton: 'Try Again',
+                    cancelButton: 'Cancel'
+                }, function (tryAgain) {
+                    if (tryAgain) {
+                        App.load('SignUp');
+                    }
+                });
+            }
+            if (username && email && password && (password == cpassword)) {
+            // on successful validation create the user
+                var usersRef = ref.child("Users");
+                usersRef.child(username).set({
+                    Email: email,
+                    Password: password
+                });
+                App.load('mainPage');
+            } else {
+            // on validation failure show the validation message
+                App.dialog({
+                    title: 'Validation Error',
+                    text: 'Please enter username and password.',
+                    //okButton: 'Try Again',
+                    cancelButton: 'Cancel'
+                }, function (tryAgain) {
+                    if (tryAgain) {
+                        App.load('SignUp');
+                    }
+                });
+            }
+
+        });
+      });
+          
+          App.controller('SignIn', function (page) {
+
+    $(page)
+        .find('#btnSignIn')
+        .on('click', function () {
+            var email = $('#btnEmailSignIn').val();
+            var password = $('#btnPass').val();
+            if (email && password) {
+                var ref = new Firebase("https://brilliant-fire-8234.firebaseio.com");
+ref.authWithPassword({
+  email    : email,
+  password : password
+}, function(error, authData) {
+  if (error) {
+    App.dialog({
+                    title: 'User not found',
+                    text: 'Please enter a correct email and password',
+                    okButton: 'Sign Up',
+                    cancelButton: 'Try Again'
+                }, function (tryAgain) {
+                    if (tryAgain) {
+                        App.load('SignUp');
+                    }
+                });
+  } else {
+    App.load('mainPage');
+  }
+});
+            } else {
+                App.dialog({
+                    title: 'Validation Error',
+                    text: 'Please enter username and password.',
+                    okButton: 'Try Again',
+                    cancelButton: 'Cancel'
+                }, function (tryAgain) {
+                    if (tryAgain) {
+                        App.load('SignIn');
+                    }
+                });
+            }
+        });
+});
+          
+      App.controller('mainPage', function (page) {
+        
+          //Controls for distance slider
+          //Button to decrement distance
+            $(page)
+                .find('#downBtn')
+                .on('click', function(){
+                    var value = $("#sliderValue").text();
+
+                    if(value == 0){
+                        alert("Sorry can't get much closer than that!");
+                    } else {
+                        value--;
+                        $("#sliderValue").text(value); 
+                    }
+            });
+            
+            //Button to increment distance
+            $(page)
+                .find('#upBtn')
+                .on('click', function(){
+                    var value = parseInt($("#sliderValue").text());
+
+                    if(value == 10){
+
+                    } else {
+                        value++;
+                        $("#sliderValue").text(value); 
+                    }
+            });
+          
+            //Controls to toggle filters
+            //Button to toggle popular button
+            $(page)
+                .find('#popularBtn')
+                .on('click', function(){
+                    $(this).toggleClass('activeBtn');
+            });
+            //Button to toggle free button
+            $(page)
+                .find('#freeBtn')
+                .on('click', function(){
+                    $(this).toggleClass('activeBtn');
+            });
+            //Button to toggle instant button
+            $(page)
+                .find('#instantBtn')
+                .on('click', function(){
+                    $(this).toggleClass('activeBtn');
+            });  
+          });
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>
